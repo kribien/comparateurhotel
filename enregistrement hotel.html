@@ -1,0 +1,143 @@
+<html>
+ <head>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+ </head>
+ <body class="bg-green-900 text-white font-sans">
+  <header class="flex items-center justify-between p-4 bg-white text-black">
+   <div class="flex items-center">
+    <img alt="Logo" class="rounded-full" height="40" src="https://storage.googleapis.com/a1aa/image/WWie2ZCV6xzPfkWsUC4lxd2cHMCRRj5fEWcTnvrfF2rPTuaPB.jpg" width="40"/>
+    <span class="ml-2">
+     Logo
+    </span>
+   </div>
+   <div class="flex items-center space-x-4">
+    <i class="fas fa-calendar-alt">
+    </i>
+    <i class="fas fa-bell">
+    </i>
+    <img alt="User Avatar" class="rounded-full" height="40" src="https://storage.googleapis.com/a1aa/image/mLuoImZBFtaFJpHKZKS9HbXBzJa9vvZo4NsKPyIkjtiN5q9E.jpg" width="40"/>
+   </div>
+  </header>
+  <main class="flex flex-col items-center justify-center min-h-screen p-4">
+   <h1 class="text-center text-xl mb-4">
+    Bienvenue dans notre espace reserver au hotel.
+    <br/>
+    Veuillez remplir les champs suivant.
+   </h1>
+   <div class="flex space-x-4 mb-8">
+    <div class="w-10 h-10 flex items-center justify-center border-2 border-white rounded-full">
+     1
+    </div>
+    <div class="w-10 h-10 flex items-center justify-center bg-white text-green-900 rounded-full">
+     2
+    </div>
+    <div class="w-10 h-10 flex items-center justify-center border-2 border-white rounded-full">
+     3
+    </div>
+   </div>
+   <h2 class="text-center text-lg mb-4">
+    Informations détaillé
+   </h2>
+   <form class="bg-green-800 p-6 rounded-lg w-full max-w-md space-y-4">
+    <div class="flex items-center space-x-4">
+     <img alt="Add Photo" class="rounded-full" height="40" src="https://storage.googleapis.com/a1aa/image/ZGAQ58XerGXPUyffLMbq3gYH43vddyD9gWnHhd88st1pJXtnA.jpg" width="40"/>
+     <label class="flex-1">
+      Ajouter une photo (s)
+     </label>
+    </div>
+    <div>
+     <label>
+      Nom de la chambre
+     </label>
+     <input class="w-full p-2 mt-1 rounded bg-white text-black" type="text"/>
+    </div>
+    <div>
+     <label>
+      Catégorie
+     </label>
+     <div class="flex flex-col space-y-2 mt-1">
+      <label class="flex items-center">
+       <input class="mr-2" name="categorie" type="radio"/>
+       Standard
+      </label>
+      <label class="flex items-center">
+       <input class="mr-2" name="categorie" type="radio"/>
+       Deluxe
+      </label>
+      <label class="flex items-center">
+       <input class="mr-2" name="categorie" type="radio"/>
+       Suite
+      </label>
+     </div>
+    </div>
+    <div>
+     <label>
+      Prix
+     </label>
+     <input class="w-full p-2 mt-1 rounded bg-white text-black" type="text"/>
+    </div>
+    <div>
+     <label>
+      Capacité de la chambre
+     </label>
+     <input class="w-full p-2 mt-1 rounded bg-white text-black" type="text"/>
+    </div>
+    <div>
+     <label>
+      Options
+     </label>
+     <textarea class="w-full p-2 mt-1 rounded bg-white text-black"></textarea>
+    </div>
+    <div class="flex space-x-4">
+     <div class="flex-1">
+      <label>
+       Disponibilité
+      </label>
+      <div class="flex space-x-2 mt-1">
+       <input class="w-full p-2 rounded bg-white text-black" placeholder="Du :" type="text"/>
+       <input class="w-full p-2 rounded bg-white text-black" placeholder="Au :" type="text"/>
+      </div>
+     </div>
+    </div>
+    <div>
+     <label>
+      Familiale
+     </label>
+     <div class="flex flex-col space-y-2 mt-1">
+      <label class="flex items-center">
+       <input class="mr-2" name="familiale" type="radio"/>
+       Oui
+      </label>
+      <label class="flex items-center">
+       <input class="mr-2" name="familiale" type="radio"/>
+       Non
+      </label>
+     </div>
+    </div>
+    <div class="flex justify-center">
+     <button class="bg-black text-white py-2 px-4 rounded" type="submit">
+      Suivant
+     </button>
+    </div>
+   </form>
+   <div class="flex justify-between w-full max-w-md mt-8">
+    <button class="flex items-center space-x-2">
+     <i class="fas fa-arrow-left">
+     </i>
+     <span>
+      Previous
+     </span>
+    </button>
+    <button class="flex items-center space-x-2">
+     <span>
+      Next
+     </span>
+     <i class="fas fa-arrow-right">
+     </i>
+    </button>
+   </div>
+  </main>
+ </body>
+</html>

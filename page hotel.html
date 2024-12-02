@@ -1,0 +1,178 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Search</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-green-900 text-white">
+    <header class="flex items-center justify-between p-4 bg-white text-black">
+        <div class="flex items-center">
+            <div class="w-10 h-10 bg-gray-300 rounded-full mr-4"></div>
+            <input type="text" placeholder="Hotel" class="p-2 border border-gray-300 rounded-md w-96">
+        </div>
+        <div class="flex items-center space-x-4">
+            <i class="fas fa-calendar-alt"></i>
+            <i class="fas fa-bell"></i>
+            <i class="fas fa-user-circle"></i>
+        </div>
+    </header>
+    <main class="flex p-4">
+        <aside class="w-1/4 p-4 space-y-4">
+            <div>
+                <h2 class="text-xl font-bold">Rechercher</h2>
+                <div class="space-y-2 mt-2">
+                    <input type="text" placeholder="Pays" class="w-full p-2 border border-gray-300 rounded-md">
+                    <input type="text" placeholder="Ville" class="w-full p-2 border border-gray-300 rounded-md">
+                    <input type="text" placeholder="Quartier" class="w-full p-2 border border-gray-300 rounded-md">
+                    <input type="text" placeholder="Type de chambre" class="w-full p-2 border border-gray-300 rounded-md">
+                    <div class="flex items-center space-x-2">
+                        <label>Nombre d'enfants</label>
+                        <input type="number" value="1" class="w-16 p-2 border border-gray-300 rounded-md">
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <label>Nombre d'adultes</label>
+                        <input type="number" value="1" class="w-16 p-2 border border-gray-300 rounded-md">
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <label>Nombre de chambres</label>
+                        <input type="number" value="1" class="w-16 p-2 border border-gray-300 rounded-md">
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h2 class="text-xl font-bold">Durée de séjour</h2>
+                <div class="space-y-2 mt-2">
+                    <input type="date" class="w-full p-2 border border-gray-300 rounded-md">
+                    <input type="date" class="w-full p-2 border border-gray-300 rounded-md">
+                </div>
+            </div>
+            <div>
+                <h2 class="text-xl font-bold">Votre budget</h2>
+                <div class="space-y-2 mt-2">
+                    <label>Prix</label>
+                    <input type="range" min="0" max="100000" value="90000" class="w-full">
+                </div>
+            </div>
+            <div>
+                <h2 class="text-xl font-bold">Filtres pertinent</h2>
+                <div class="space-y-2 mt-2">
+                    <div class="flex items-center space-x-2">
+                        <span class="bg-gray-700 text-white px-2 py-1 rounded-full">Loft</span>
+                        <span class="bg-gray-700 text-white px-2 py-1 rounded-full">Modern</span>
+                    </div>
+                    <div class="space-y-1">
+                        <div class="flex items-center space-x-2">
+                            <input type="checkbox" class="form-checkbox">
+                            <label>Label Description</label>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <input type="checkbox" class="form-checkbox">
+                            <label>Label Description</label>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <input type="checkbox" class="form-checkbox">
+                            <label>Label Description</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <section class="w-3/4 p-4">
+            <div class="flex items-center space-x-2 mb-4">
+                <span class="font-bold">Filtres:</span>
+                <span class="bg-gray-700 text-white px-2 py-1 rounded-full">Modern</span>
+                <span class="bg-gray-700 text-white px-2 py-1 rounded-full">Abordable</span>
+                <span class="bg-gray-700 text-white px-2 py-1 rounded-full">Centre ville</span>
+                <span class="bg-gray-700 text-white px-2 py-1 rounded-full">Lumineux</span>
+            </div>
+            <div class="space-y-4">
+                <div class="flex items-center space-x-4">
+                    <img src="https://placehold.co/150x100" alt="Image of Hilton hotel" class="w-32 h-24 object-cover rounded-md">
+                    <div class="flex-1">
+                        <h3 class="text-xl font-bold">Hilton hotel</h3>
+                        <p>Ville</p>
+                        <p>Detail bref</p>
+                        <p>Lorem ipsum trepasis torsimis nanami loren ninnimatec osiri typogratis minnepolis ni forinimos portis nir allerinis vonirisis</p>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <span>60000 XAF / nuitée</span>
+                        <input type="checkbox" class="form-checkbox">
+                        <button class="bg-black text-white px-4 py-2 rounded-md">Voir</button>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <img src="https://placehold.co/150x100" alt="Image of Star Land Hotel" class="w-32 h-24 object-cover rounded-md">
+                    <div class="flex-1">
+                        <h3 class="text-xl font-bold">Star Land Hotel</h3>
+                        <p>Ville</p>
+                        <p>Detail bref</p>
+                        <p>Lorem ipsum trepasis torsimis nanami loren ninnimatec osiri typogratis minnepolis ni forinimos portis nir allerinis vonirisis</p>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <span>60000 XAF / nuitée</span>
+                        <input type="checkbox" class="form-checkbox">
+                        <button class="bg-black text-white px-4 py-2 rounded-md">Voir</button>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <img src="https://placehold.co/150x100" alt="Image of Krystal Hotel" class="w-32 h-24 object-cover rounded-md">
+                    <div class="flex-1">
+                        <h3 class="text-xl font-bold">Krystal Hotel</h3>
+                        <p>Ville</p>
+                        <p>Detail bref</p>
+                        <p>Lorem ipsum trepasis torsimis nanami loren ninnimatec osiri typogratis minnepolis ni forinimos portis nir allerinis vonirisis</p>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <span>60000 XAF / nuitée</span>
+                        <input type="checkbox" class="form-checkbox">
+                        <button class="bg-black text-white px-4 py-2 rounded-md">Voir</button>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-between mt-4">
+                <button class="text-white">← Previous</button>
+                <button class="text-white">Next →</button>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-green-800 p-4 mt-4">
+        <div class="flex justify-between">
+            <div class="flex space-x-4">
+                <i class="fas fa-times"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-youtube"></i>
+                <i class="fab fa-linkedin"></i>
+            </div>
+            <div class="flex space-x-8">
+                <div>
+                    <h3 class="font-bold">Explore</h3>
+                    <ul class="space-y-1">
+                        <li>Design</li>
+                        <li>Prototyping</li>
+                        <li>Development features</li>
+                        <li>Design systems</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold">Resources</h3>
+                    <ul class="space-y-1">
+                        <li>Blog</li>
+                        <li>Best practices</li>
+                        <li>Support</li>
+                        <li>Developers</li>
+                        <li>Resource library</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

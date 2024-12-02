@@ -1,0 +1,333 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Real Estate Listings
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+ </head>
+ <body class="bg-green-900 text-white font-sans">
+  <header class="flex items-center justify-between p-4 bg-gray-200">
+   <div class="flex items-center">
+    <div class="w-10 h-10 bg-gray-400 rounded-full">
+    </div>
+    <span class="ml-2 text-black">
+     Logo
+    </span>
+   </div>
+   <div class="flex items-center w-1/2">
+    <input class="w-full p-2 rounded-md" placeholder="Rechercher..." type="text"/>
+   </div>
+   <div class="flex items-center space-x-4">
+    <i class="fas fa-calendar-alt text-black">
+    </i>
+    <i class="fas fa-bell text-black">
+    </i>
+   </div>
+  </header>
+  <main class="flex p-4">
+   <aside class="w-1/4 p-4 bg-green-800 rounded-md">
+    <h2 class="text-xl mb-4">
+     Rechercher
+    </h2>
+    <div class="space-y-2">
+     <input class="w-full p-2 rounded-md" placeholder="Pays" type="text"/>
+     <input class="w-full p-2 rounded-md" placeholder="Ville" type="text"/>
+     <input class="w-full p-2 rounded-md" placeholder="Quartier" type="text"/>
+     <input class="w-full p-2 rounded-md" placeholder="Superficie" type="text"/>
+     <div class="flex items-center space-x-2">
+      <label class="w-1/2" for="chambres">
+       Nombres de chambres
+      </label>
+      <input class="w-1/2 p-2 rounded-md" id="chambres" type="number" value="1"/>
+     </div>
+     <div class="flex items-center space-x-2">
+      <label class="w-1/2" for="cuisines">
+       Nombres de cuisines
+      </label>
+      <input class="w-1/2 p-2 rounded-md" id="cuisines" type="number" value="1"/>
+     </div>
+     <div class="flex items-center space-x-2">
+      <label class="w-1/2" for="salons">
+       Nombres de salons
+      </label>
+      <input class="w-1/2 p-2 rounded-md" id="salons" type="number" value="1"/>
+     </div>
+     <button class="w-full p-2 bg-gray-700 rounded-md">
+      Modern
+     </button>
+    </div>
+    <h2 class="text-xl mt-6 mb-4">
+     Durée de séjour
+    </h2>
+    <div class="space-y-2">
+     <input class="w-full p-2 rounded-md" type="date"/>
+     <input class="w-full p-2 rounded-md" type="date"/>
+    </div>
+    <h2 class="text-xl mt-6 mb-4">
+     Votre budget
+    </h2>
+    <div class="space-y-2">
+     <div class="flex items-center space-x-2">
+      <label class="w-1/2" for="budget">
+       Prix
+      </label>
+      <input class="w-1/2 p-2 rounded-md" id="budget" type="number" value="90000"/>
+     </div>
+    </div>
+    <h2 class="text-xl mt-6 mb-4">
+     Filtres pertinent
+    </h2>
+    <div class="space-y-2">
+     <div class="flex items-center space-x-2">
+      <span class="bg-gray-700 p-2 rounded-md">
+       Loft
+      </span>
+      <span class="bg-gray-700 p-2 rounded-md">
+       Modern
+      </span>
+     </div>
+     <div class="space-y-2 mt-4">
+      <label class="block">
+       Filtre
+      </label>
+      <div class="space-y-1">
+       <div class="flex items-center space-x-2">
+        <input id="piscine" type="checkbox"/>
+        <label for="piscine">
+         Piscine
+        </label>
+       </div>
+       <div class="flex items-center space-x-2">
+        <input id="sport" type="checkbox"/>
+        <label for="sport">
+         Salle de sport
+        </label>
+       </div>
+       <div class="flex items-center space-x-2">
+        <input id="reception" type="checkbox"/>
+        <label for="reception">
+         Salle de réception
+        </label>
+       </div>
+      </div>
+     </div>
+     <div class="space-y-2 mt-4">
+      <label class="block">
+       Atous
+      </label>
+      <div class="space-y-1">
+       <div class="flex items-center space-x-2">
+        <input id="restaurant" type="checkbox"/>
+        <label for="restaurant">
+         Restaurant
+        </label>
+       </div>
+       <div class="flex items-center space-x-2">
+        <input id="parcs" type="checkbox"/>
+        <label for="parcs">
+         Parcs
+        </label>
+       </div>
+       <div class="flex items-center space-x-2">
+        <input id="arcade" type="checkbox"/>
+        <label for="arcade">
+         Arcade
+        </label>
+       </div>
+      </div>
+     </div>
+    </div>
+   </aside>
+   <section class="w-3/4 p-4">
+    <h2 class="text-xl mb-4">
+     Filtres:
+    </h2>
+    <div class="flex items-center space-x-2 mb-4">
+     <span class="bg-gray-700 p-2 rounded-md">
+      Modern
+     </span>
+     <span class="bg-gray-700 p-2 rounded-md">
+      Abordable
+     </span>
+     <span class="bg-gray-700 p-2 rounded-md">
+      Centre ville
+     </span>
+     <span class="bg-gray-700 p-2 rounded-md">
+      Lumineux
+     </span>
+    </div>
+    <div class="space-y-4">
+     <div class="flex items-start space-x-4">
+      <img alt="Image of Dallas property" class="w-1/4 rounded-md" height="150" src="https://storage.googleapis.com/a1aa/image/KuOnmefHjzt7lkU2yRr5B671rkAlDRe1vLVOmvhzAiTubXtnA.jpg" width="150"/>
+      <div class="w-3/4">
+       <h3 class="text-2xl">
+        Dallas
+       </h3>
+       <p>
+        Ville
+       </p>
+       <p>
+        Detail bref
+       </p>
+       <p>
+        Lorem ipsum trepasis torsimis nanami loren nimnatace osiri typogratis minnepolis ni foriminos portis nir allerinis vonrisis
+       </p>
+       <div class="flex items-center justify-between mt-2">
+        <span>
+         60000 XAF / nuitée
+        </span>
+        <button class="bg-black text-white p-2 rounded-md">
+         Voir
+        </button>
+       </div>
+      </div>
+     </div>
+     <div class="flex items-start space-x-4">
+      <img alt="Image of Q &amp; R Complex property" class="w-1/4 rounded-md" height="150" src="https://storage.googleapis.com/a1aa/image/wNcjPhR2giZENNWsp41fdQryF9WGP71xPjIGXsayfvt6tr2TA.jpg" width="150"/>
+      <div class="w-3/4">
+       <h3 class="text-2xl">
+        Q &amp; R Complex
+       </h3>
+       <p>
+        Ville
+       </p>
+       <p>
+        Detail bref
+       </p>
+       <p>
+        Lorem ipsum trepasis torsimis nanami loren nimnatace osiri typogratis minnepolis ni foriminos portis nir allerinis vonrisis
+       </p>
+       <div class="flex items-center justify-between mt-2">
+        <span>
+         60000 XAF / nuitée
+        </span>
+        <button class="bg-black text-white p-2 rounded-md">
+         Voir
+        </button>
+       </div>
+      </div>
+     </div>
+     <div class="flex items-start space-x-4">
+      <img alt="Image of MiMi's Villa property" class="w-1/4 rounded-md" height="150" src="https://storage.googleapis.com/a1aa/image/FMe74JOSrqy7OidVyLbpckZJjAvRhBEBAywlYrc3jFz82V7JA.jpg" width="150"/>
+      <div class="w-3/4">
+       <h3 class="text-2xl">
+        MiMi's Villa
+       </h3>
+       <p>
+        Ville
+       </p>
+       <p>
+        Detail bref
+       </p>
+       <p>
+        Lorem ipsum trepasis torsimis nanami loren nimnatace osiri typogratis minnepolis ni foriminos portis nir allerinis vonrisis
+       </p>
+       <div class="flex items-center justify-between mt-2">
+        <span>
+         60000 XAF / nuitée
+        </span>
+        <button class="bg-black text-white p-2 rounded-md">
+         Voir
+        </button>
+       </div>
+      </div>
+     </div>
+     <div class="flex items-start space-x-4">
+      <img alt="Image of Rhodd Complex property" class="w-1/4 rounded-md" height="150" src="https://storage.googleapis.com/a1aa/image/89N21evwtbwUTqlow3EUQjavezOffN34Tz6YFCXpucLX3uaPB.jpg" width="150"/>
+      <div class="w-3/4">
+       <h3 class="text-2xl">
+        Rhodd Complex
+       </h3>
+       <p>
+        Ville
+       </p>
+       <p>
+        Detail bref
+       </p>
+       <p>
+        Lorem ipsum trepasis torsimis nanami loren nimnatace osiri typogratis minnepolis ni foriminos portis nir allerinis vonrisis
+       </p>
+       <div class="flex items-center justify-between mt-2">
+        <span>
+         60000 XAF / nuitée
+        </span>
+        <button class="bg-black text-white p-2 rounded-md">
+         Voir
+        </button>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="flex items-center justify-between mt-4">
+     <button class="text-white">
+      ← Previous
+     </button>
+     <button class="text-white">
+      Next →
+     </button>
+    </div>
+   </section>
+  </main>
+  <footer class="p-4 bg-green-800 mt-4">
+   <div class="flex justify-between">
+    <div class="flex space-x-4">
+     <i class="fab fa-facebook-f">
+     </i>
+     <i class="fab fa-twitter">
+     </i>
+     <i class="fab fa-instagram">
+     </i>
+     <i class="fab fa-linkedin-in">
+     </i>
+    </div>
+    <div class="flex space-x-8">
+     <div>
+      <h3 class="text-lg">
+       Explore
+      </h3>
+      <ul>
+       <li>
+        Design
+       </li>
+       <li>
+        Prototyping
+       </li>
+       <li>
+        Development features
+       </li>
+       <li>
+        Design systems
+       </li>
+      </ul>
+     </div>
+     <div>
+      <h3 class="text-lg">
+       Resources
+      </h3>
+      <ul>
+       <li>
+        Blog
+       </li>
+       <li>
+        Best practices
+       </li>
+       <li>
+        Support
+       </li>
+       <li>
+        Developers
+       </li>
+       <li>
+        Resource library
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+  </footer>
+ </body>
+</html>
