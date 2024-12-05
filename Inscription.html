@@ -13,8 +13,11 @@
    <img alt="A person holding travel documents and smiling" class="rounded-t-lg md:rounded-l-lg md:rounded-t-none w-full md:w-1/2" height="400" src="https://storage.googleapis.com/a1aa/image/3DRhlVxve4VOeEgU7qaMAv6IzMJE56PebPRdvHlg0Ne2luaPB.jpg" width="400"/>
    <div class="p-8 md:w-1/2">
     <h2 class="text-center text-2xl font-semibold mb-6">
-     Inscription
+     Inscription du Gestionnaire de l'appartement
     </h2>
+    <h4 class="text-center text-1xl font-semibold mb-2">
+        Remplissez le formulaire suivant pour vous inscrire sur l'application
+    </h4>
     <form class="space-y-4">
      <div>
       <label class="block text-sm font-medium text-gray-700" for="nom">
@@ -23,29 +26,99 @@
       <input class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" id="nom" name="nom" placeholder="Votre nom" type="text"/>
      </div>
      <div>
-      <label class="block text-sm font-medium text-gray-700" for="prenom">
-       Prénom
+      <label class="block text-sm font-medium text-gray-700" for="email">
+       Email
       </label>
-      <input class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" id="prenom" name="prenom" placeholder="Votre prénom" type="text"/>
+      <input class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" id="prenom" name="email" placeholder="Votre email" type="text"/>
      </div>
      <div>
-      <label class="block text-sm font-medium text-gray-700" for="password">
+      <label class="block text-sm font-medium text-gray-700" for="datenais">
+       Date de naissance
+      </label>
+      <input class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" id="password" name="date" placeholder="Votre date de naissance" type="date"/>
+     </div>
+     <div>
+      <label class="block text-sm font-medium text-gray-700" for="mot de passe">
        Mot de passe
       </label>
-      <input class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" id="password" name="password" placeholder="Votre mot de passe" type="password"/>
-     </div>
-     <div>
-      <label class="block text-sm font-medium text-gray-700" for="cni">
-       Numéro de CNI
-      </label>
-      <input class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" id="cni" name="cni" placeholder="Votre numéro de CNI" type="text"/>
+      <input class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" id="mdp" name="mdp" placeholder="Votre mot de passe" type="text"/>
      </div>
      <div>
       <label class="block text-sm font-medium text-gray-700" for="contact">
-       Contact
+      Contact 
       </label>
-      <input class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" id="contact" name="contact" placeholder="Votre contact" type="text"/>
+      <input class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" id="contact" name="contact" placeholder="Votre contact" type="number"/>
      </div>
+     <div>
+        <label class="block text-sm font-medium text-gray-700" for="ville">
+        Ville
+        </label>
+        <select class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" type="text" id="ville" name="ville" required>
+            <option selected>Choisir ue ville</option>
+            <option value="YAOUNDE">Yaoundé</option>
+            <option value="DOUALA">Douala</option>
+            <option value="LAGOS">Lagos</option>
+            <option value="DAKAR">Dakar</option>
+        </select>
+    </div>
+    <div>
+        <label class="block text-sm font-medium text-gray-700" for="pays">
+        Pays
+        </label>
+        <select class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" type="text" id="pays" name="pays" required>
+            <option selected>Choisir un pays</option>
+            <option value="CAMEROUN">CAMEROUN</option>
+            <option value="NIGERIA">NIGERIA</option>
+            <option value="BENIN">BENIN</option>
+            <option value="SENEGAL">SENEGAL</option>
+        </select>
+    </div>
+    <div>
+        <label class="block text-sm font-medium text-gray-700" for="quartier">
+         Quartier
+        </label>
+        <input class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" id="quartier" name="quartier" placeholder="Votre quartier" type="text"/>
+    </div>
+    <div>
+        <label class="block text-sm font-medium text-gray-700" for="nationalite">
+         Nationalité
+        </label>
+        <input class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" id="nation" name="nation" placeholder="Votre nationalite" type="text"/>
+    </div>
+    <div>
+        <label class="block text-sm font-medium text-gray-700" for="fonction">
+        Fonction
+        </label>
+        <select class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" type="text" id="ville" name="ville" required>
+            <option selected>Choisir une fonction</option>
+            <option value="GESAP">Gestionnaire d'Appartement</option>
+            <option value="GESHO">Gestionnaire d'Hotel</option>
+            <option value="GESHO">Gestionnaire de Maison d'Hote</option>
+            <option value="CLIENT">Client</option>
+        </select>
+    </div>
+     <h4 class="text-center text-1xl font-semibold mb-2">
+        Remplissez l'un des champs suivants pour votre identification valide
+    </h4>
+     <div>
+        <label class="block text-sm font-medium text-gray-700" for="cni">
+        Numéro de CNI
+        </label>
+        <input class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" id="cni" name="cni" placeholder="Votre numéro de cni" type="text"/>
+    </div>
+    <div>
+        <label class="block text-sm font-medium text-gray-700" for="passport">
+        Numéro du passport
+        </label>
+        <input class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" id="passport" name="passport" placeholder="Votre numero de passport" type="text"/>
+       </div>
+    <div>
+        <label class="block text-sm font-medium text-gray-700" for="permis">
+        Permis de conduire
+        </label>
+        <input class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" id="permis" name="permis" placeholder="Votre numero de permis de conduire" type="text"/>
+    </div>
+       
      <div>
       <button class="w-full py-2 px-4 bg-black text-white font-semibold rounded-md shadow-sm hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" type="submit">
        S'inscrire
@@ -55,4 +128,4 @@
    </div>
   </div>
  </body>
-</html>
+</html> 
