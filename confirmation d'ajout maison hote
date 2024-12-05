@@ -1,0 +1,59 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Reservation Page
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+ </head>
+ <body class="bg-green-900 text-white flex flex-col items-center justify-center min-h-screen">
+  <header class="w-full flex justify-between items-center p-4 bg-green-900">
+   <img alt="Logo" class="h-8" height="50" src="https://storage.googleapis.com/a1aa/image/IjpU1rsL7iIkDJst25bUYt2gHEp3YgtJcX14lZUmT7Ujse7JA.jpg" width="50"/>
+   <i class="fas fa-shopping-cart text-white">
+   </i>
+  </header>
+  <main class="flex flex-col items-center w-full max-w-md p-4">
+   <h1 class="text-center mb-4">
+    Bienvenue dans notre espace reserver au Appartements. Veuillez remplir les champs suivant.
+   </h1>
+   <div class="flex space-x-4 mb-4">
+    <div class="w-10 h-10 flex items-center justify-center border border-white rounded-full">
+     1
+    </div>
+    <div class="w-10 h-10 flex items-center justify-center border border-white rounded-full">
+     2
+    </div>
+   </div>
+   <button class="bg-white text-green-900 px-4 py-2 rounded mb-4">
+    Valider
+   </button>
+   <div class="bg-green-800 p-4 rounded w-full text-center">
+    <p class="mb-4">
+     Voulez vous enregistrer les informations que vous venez de remplir ?
+    </p>
+    <p class="mb-4">
+     Lore ipsum itiris set asistura mes hathor
+    </p>
+    <div class="flex justify-center space-x-4 mb-4">
+     <button class="bg-black text-white px-4 py-2 rounded">
+      Précédent
+     </button>
+     <button class="bg-black text-white px-4 py-2 rounded">
+      Oui
+     </button>
+     <button class="bg-black text-white px-4 py-2 rounded">
+      Non
+     </button>
+    </div>
+   </div>
+   <footer class="mt-4">
+    <p class="bg-black text-white px-4 py-2 rounded">
+     Votre opération a été effectuée avec succès.
+    </p>
+   </footer>
+  </main>
+ </body>
+</html>
