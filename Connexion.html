@@ -1,33 +1,58 @@
 <html lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>
-   Connexion
-  </title>
-  <script src="https://cdn.tailwindcss.com">
-  </script>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
- </head>
- <body class="bg-green-900 flex items-center justify-center min-h-screen">
-  <div class="text-center text-white mb-8">
-   <h1 class="text-2xl">
-    Connexion
-   </h1>
-  </div>
-  <div class="bg-white rounded-lg shadow-lg flex flex-col md:flex-row items-center p-6 md:p-0">
-   <img alt="Person holding a passport and boarding pass, smiling excitedly" class="rounded-lg md:rounded-none md:rounded-l-lg w-full md:w-1/2" height="300" src="https://storage.googleapis.com/a1aa/image/wptGfeCUU0scBkd3md9MQK3vNoufJq7RjWHSesKs6yEMluaPB.jpg" width="300"/>
-   <div class="p-6 md:p-8">
-    <button class="w-full bg-gray-100 text-black py-2 px-4 rounded mb-4">
-     Sign in with Google
-    </button>
-    <button class="w-full bg-blue-800 text-white py-2 px-4 rounded mb-4">
-     Sign in with Facebook
-    </button>
-    <button class="w-full bg-black text-white py-2 px-4 rounded">
-     Se connecter via son email
-    </button>
-   </div>
-  </div>
- </body>
-</html>
+    <head>
+     <meta charset="utf-8"/>
+     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+     <title>
+      Connexion
+     </title>
+     <script src="https://cdn.tailwindcss.com">
+     </script>
+    </head>
+    <body class="bg-green-900 flex items-center justify-center min-h-screen">
+     <div class="bg-white rounded-lg shadow-lg flex flex-col md:flex-row items-center p-6 md:p-0">
+      <img alt="Person holding travel tickets and smiling" class="rounded-lg md:rounded-none md:rounded-l-lg w-full md:w-1/2" height="300" src="https://storage.googleapis.com/a1aa/image/I4JWnOs4fZyUSCesSCfeaIpP7eYocDPmO0yuYbVYvM8b0d1eE.jpg" width="300"/>
+      <div class="p-6 md:p-12 w-full md:w-1/2">
+       <h2 class="text-2xl font-semibold mb-6 text-center md:text-left">
+        Bienvenue sur COMPARATEUR
+       </h2>
+       <h2 class="text-1xl font-semibold mb-2 text-center md:text-left">
+         Remplissez ce formulaire pour vous connecter à l'application
+        </h2>
+       <form>
+        <div class="mb-4">
+         <label class="block text-gray-700" for="nom">
+          Nom
+         </label>
+         <input class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600" id="nom" placeholder="Votre nom" type="text"/>
+        </div>
+        <div class="mb-4">
+         <label class="block text-gray-700" for="password">
+          Mot de passe
+         </label>
+         <input class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600" id="password" placeholder="Votre mot de passe" type="password"/>
+        </div>
+        <div class="p-6 md:p-8">
+         <button class="w-full bg-gray-100 text-black py-2 px-4 rounded mb-4">
+          Sign in with Google
+         </button>
+         <button class="w-full bg-blue-800 text-white py-2 px-4 rounded mb-4">
+          Sign in with Facebook
+         </button>
+         <button class="w-full bg-black text-white py-2 px-4 rounded">
+          Se connecter via son email
+        <button class="w-full bg-black text-white py-2 rounded-lg hover:bg-gray-800" type="submit">
+         Se connecter
+        </button>
+       </form>
+       <div class="mt-4 text-center">
+        <a class="text-gray-600 hover:text-gray-800" href="#">
+         Mot de passe oublié?
+        </a>
+        <a class="text-gray-600 hover:text-gray-800" href="inscriregesap.html">
+           Inscrivez-vous.
+          </a>
+       </div>
+      </div>
+     </div>
+    </body>
+   </html>
