@@ -1,4 +1,3 @@
-<html lang="en">
 <head>
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -29,7 +28,7 @@
     <h1 class="text-center text-xl mb-4">
      Bienvenue dans notre espace reserver aux Appartements.
      <br/>
-     Veuillez remplir les champs suivant:
+     Veuillez remplir les champs suivant.
     </h1>
     <div class="flex justify-center mb-8">
     <div class="flex items-center space-x-4">
@@ -43,7 +42,7 @@
    </div>
    <div class="bg-green-800 p-4 rounded-lg">
     <h2 class="text-center mb-4">
-     Informations générale
+     Informations générales
     </h2>
     <div class="mb-4">
     <span>
@@ -63,7 +62,7 @@
       <input class="w-1/6 p-10 rounded bg-white-700 text-black" name="photo" type="photo"/>
       <input class="w-1/6 p-10 rounded bg-white-700 text-black" name="photo" type="photo"/>
      </label>
-     
+     </label>
     </div>
     <div class="space-y-10">
     <div>
@@ -78,7 +77,7 @@
     </div>
     <div>
     <label for="ville" class=" text-white">Ville</label>
-      <select class="w-full p-2 rounded bg-white-700 text-black" placeholder="ville" type="text">
+      <select class="w-full p-2 rounded bg-white-700 text-black" placeholder="ville" name="ville" type="text">
       <option selected>Choisir une ville....</option>
             <option value="yaounde">Yaounde</option>
             <option value="Limbe">Limbe</option>
@@ -156,7 +155,7 @@
         </button>
         <button
           class="bg-blue-600 px-4 py-2 rounded-md hover:bg-blue-700 focus:outline-none"
-        ><a href="validerap.php">
+        ><a href="">
           Next →
           </a></button>
       </div>
