@@ -1,105 +1,112 @@
+<!DOCTYPE html>
 <html lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>
-   Vos dernieres recherches
-  </title>
-  <script src="https://cdn.tailwindcss.com">
-  </script>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
- </head>
- <body class="bg-gray-100">
-  <div class="bg-green-900 text-white min-h-screen p-6">
-   <header class="flex items-center justify-between mb-6">
-    <div class="flex items-center">
-     <div class="bg-gray-300 rounded-full w-10 h-10">
-     </div>
-     <span class="ml-2">
-      Logo
-     </span>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vos dernières recherches</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-100">
+    <div class="bg-green-900 text-white min-h-screen p-4 md:p-6">
+      <!-- Header -->
+      <header
+        class="flex flex-col md:flex-row items-center justify-between mb-6 space-y-4 md:space-y-0"
+      >
+        <div class="flex items-center space-x-2">
+          <div class="bg-gray-300 rounded-full w-10 h-10"></div>
+          <span class="text-lg font-semibold">Logo</span>
+        </div>
+        <div class="flex items-center space-x-4 text-xl">
+          <i class="fas fa-shopping-cart"></i>
+          <i class="fas fa-user-circle"></i>
+        </div>
+      </header>
+
+      <!-- Main Content -->
+      <h1 class="text-2xl font-bold mb-6">Vos dernières recherches</h1>
+      <div class="space-y-6">
+        <!-- Card 1 -->
+        <div
+          class="bg-green-800 p-4 rounded-lg flex flex-col md:flex-row items-center md:items-start space-y-4 md:space-y-0 md:space-x-4"
+        >
+          <img
+            src="https://storage.googleapis.com/a1aa/image/pPkObEc2xULFKF9gg2iI3ZV8GfF0WSQMstvnbEfRJa3mG53TA.jpg"
+            alt="Image of Hilton Hotel"
+            class="w-full md:w-32 h-32 rounded-lg object-cover"
+          />
+          <div class="flex-1 text-center md:text-left">
+            <h2 class="text-xl font-bold">Hilton Hotel</h2>
+            <p class="text-sm">Ville</p>
+            <p class="text-sm">Détail bref</p>
+            <p class="text-sm font-semibold">70000 XAF / nuitée</p>
+            <p class="text-sm text-gray-400 mt-2">
+              Lorem ipsum trepasis toirisms namari lorem inhamec odit typogratis
+              mineapolis fi fontinmos portis nir alienris vorisis
+            </p>
+          </div>
+          <button
+            class="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-700"
+          >
+            Voir
+          </button>
+        </div>
+
+        <!-- Card 2 -->
+        <div
+          class="bg-green-800 p-4 rounded-lg flex flex-col md:flex-row items-center md:items-start space-y-4 md:space-y-0 md:space-x-4"
+        >
+          <img
+            src="https://storage.googleapis.com/a1aa/image/UQyDYIkqnP6qGJFkc0Dff1TaSsWuwcBO4jUHc70W4G2nG53TA.jpg"
+            alt="Image of Star Land Hotel : Chambre 320 A"
+            class="w-full md:w-32 h-32 rounded-lg object-cover"
+          />
+          <div class="flex-1 text-center md:text-left">
+            <h2 class="text-xl font-bold">Star Land Hotel : Chambre 320 A</h2>
+            <p class="text-sm">Ville</p>
+            <p class="text-sm">Détail bref</p>
+            <p class="text-sm font-semibold">70000 XAF / nuitée</p>
+            <p class="text-sm text-gray-400 mt-2">
+              Lorem ipsum trepasis toirisms namari lorem inhamec odit typogratis
+              mineapolis fi fontinmos portis nir alienris vorisis
+            </p>
+          </div>
+          <button
+            class="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-700"
+          >
+            Voir
+          </button>
+        </div>
+
+        <!-- Card 3 -->
+        <div
+          class="bg-green-800 p-4 rounded-lg flex flex-col md:flex-row items-center md:items-start space-y-4 md:space-y-0 md:space-x-4"
+        >
+          <img
+            src="https://storage.googleapis.com/a1aa/image/6RkOQL40qv6VL1QRffke3L6u2e3vsclCcf2mQQqY9oor0If9E.jpg"
+            alt="Image of Dallas"
+            class="w-full md:w-32 h-32 rounded-lg object-cover"
+          />
+          <div class="flex-1 text-center md:text-left">
+            <h2 class="text-xl font-bold">Dallas</h2>
+            <p class="text-sm">Ville</p>
+            <p class="text-sm">Détail bref</p>
+            <p class="text-sm font-semibold">60000 XAF / nuitée</p>
+            <p class="text-sm text-gray-400 mt-2">
+              Lorem ipsum trepasis toirisms namari lorem inhamec odit typogratis
+              mineapolis fi fontinmos portis nir alienris vorisis
+            </p>
+          </div>
+          <button
+            class="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-700"
+          >
+            Voir
+          </button>
+        </div>
+      </div>
     </div>
-    <div class="flex items-center space-x-4">
-     <i class="fas fa-shopping-cart">
-     </i>
-     <i class="fas fa-user-circle">
-     </i>
-    </div>
-   </header>
-   <h1 class="text-2xl mb-6">
-    Vos dernieres recherches
-   </h1>
-   <div class="space-y-6">
-    <div class="bg-green-800 p-4 rounded-lg flex items-center">
-     <img alt="Image of Hilton Hotel" class="w-32 h-32 rounded-lg object-cover mr-4" height="150" src="https://storage.googleapis.com/a1aa/image/pPkObEc2xULFKF9gg2iI3ZV8GfF0WSQMstvnbEfRJa3mG53TA.jpg" width="150"/>
-     <div class="flex-1">
-      <h2 class="text-xl font-bold">
-       Hilton Hotel
-      </h2>
-      <p>
-       Ville
-      </p>
-      <p>
-       Detail bref
-      </p>
-      <p>
-       70000 XAF / nuitée
-      </p>
-      <p class="text-sm text-gray-400">
-       Lorem ipsum trepasis toirisms namari lorem inhamec odit typogratis mineapolis fi fontinmos portis nir alienris vorisis
-      </p>
-     </div>
-     <button class="bg-black text-white px-4 py-2 rounded-lg">
-      Voir
-     </button>
-    </div>
-    <div class="bg-green-800 p-4 rounded-lg flex items-center">
-     <img alt="Image of Star Land Hotel : Chambre 320 A" class="w-32 h-32 rounded-lg object-cover mr-4" height="150" src="https://storage.googleapis.com/a1aa/image/UQyDYIkqnP6qGJFkc0Dff1TaSsWuwcBO4jUHc70W4G2nG53TA.jpg" width="150"/>
-     <div class="flex-1">
-      <h2 class="text-xl font-bold">
-       Star Land Hotel : Chambre 320 A
-      </h2>
-      <p>
-       Ville
-      </p>
-      <p>
-       Detail bref
-      </p>
-      <p>
-       70000 XAF / nuitée
-      </p>
-      <p class="text-sm text-gray-400">
-       Lorem ipsum trepasis toirisms namari lorem inhamec odit typogratis mineapolis fi fontinmos portis nir alienris vorisis
-      </p>
-     </div>
-     <button class="bg-black text-white px-4 py-2 rounded-lg">
-      Voir
-     </button>
-    </div>
-    <div class="bg-green-800 p-4 rounded-lg flex items-center">
-     <img alt="Image of Dallas" class="w-32 h-32 rounded-lg object-cover mr-4" height="150" src="https://storage.googleapis.com/a1aa/image/6RkOQL40qv6VL1QRffke3L6u2e3vsclCcf2mQQqY9oor0If9E.jpg" width="150"/>
-     <div class="flex-1">
-      <h2 class="text-xl font-bold">
-       Dallas
-      </h2>
-      <p>
-       Ville
-      </p>
-      <p>
-       Detail bref
-      </p>
-      <p>
-       60000 XAF / nuitée
-      </p>
-      <p class="text-sm text-gray-400">
-       Lorem ipsum trepasis toirisms namari lorem inhamec odit typogratis mineapolis fi fontinmos portis nir alienris vorisis
-      </p>
-     </div>
-     <button class="bg-black text-white px-4 py-2 rounded-lg">
-      Voir
-     </button>
-    </div>
-   </div>
-  </div>
- </body>
+  </body>
 </html>
