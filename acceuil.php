@@ -12,11 +12,14 @@
   <header class="bg-white shadow-md">
    <div class="container mx-auto flex justify-between items-center p-4">
     <div class="flex items-center">
-     <img alt="Logo" class="h-10" height="40" src="https://storage.googleapis.com/a1aa/image/EhTewx4R7O0EWSBfhMSeM7cvaQMoWG28JmqKwrSNhDbfZlfeE.jpg" width="40"/>
+    <img alt="Logo"class="bg-gray-300 rounded-full w-10 h-10" class="rounded-full" height="40" src="https://storage.googleapis.com/a1aa/image/WWie2ZCV6xzPfkWsUC4lxd2cHMCRRj5fEWcTnvrfF2rPTuaPB.jpg" width="40"/>
+    <span class="text-lg font-semibold">Logo
+     
+    </span>
     </div>
     <div class="flex items-center space-x-4">
      <button class="bg-red-500 text-white px-4 py-2 rounded">
-      Découvrir
+      Déconnexion
      </button>
      <i class="fas fa-user-circle text-2xl">
      </i>
@@ -28,13 +31,13 @@
   <!-- Hero Section -->
   <section class="relative">
    <img alt="Monument with a family statue" class="w-full h-96 object-cover" height="600" src="https://storage.googleapis.com/a1aa/image/mrK1HEI6tl7cG5a9o3zFQYwftImVK2SQqs1QVpktLEbMr87JA.jpg" width="1200"/>
-   <div class="absolute inset-0 flex flex-col items-center justify-center text-white text-center">
+   <div class="absolute inset-0 flex flex-col items-center justify-center text-black text-center">
     <h1 class="text-4xl font-bold">
      Voyager comme si vous étiez à la maison
     </h1>
-    <button class="mt-4 bg-black bg-opacity-50 px-6 py-2 rounded">
+    <button class="mt-4 bg-black bg-opacity-50 px-6 py-2 rounded text-white"><a href="inscrire.php">
      Commencer
-    </button>
+     </a></button>
    </div>
   </section>
   <!-- Search Section -->
@@ -47,7 +50,7 @@
       </i>
      </button>
     </div>
-    <h2 class="text-white text-2xl mb-4">
+    <h2 class="text-white text-3xl mb-4">
      Programmer votre prochain séjour en un seul clique
     </h2>
     <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -85,10 +88,9 @@
      </div>
     </div>
    </div>
-    // ajouter br
-      <div class="container mx-auto p-4">
-   <h1 class="text-2xl mb-4">
-    Rechercher les meilleurs parmis
+    <div class="container mx-auto p-4">
+   <h1 class="text-3xl mb-4 text-white">
+    Rechercher les meilleurs parmi
    </h1>
    <div class="bg-white text-black p-4 rounded-lg flex items-center mb-8">
     <div class="w-1/2">
@@ -105,7 +107,7 @@
     </div>
    </div>
    <hr class="border-gray-400 mb-8"/>
-   <h2 class="text-xl mb-4">
+   <h2 class="text-3xl mb-4 text-white">
     Hotels à proximité
    </h2>
    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
@@ -118,7 +120,7 @@
       Body text for whatever you'd like to say.
      </p>
      <button class="bg-green-900 text-white px-4 py-2 rounded mt-2">
-      Voir
+      Voir+
      </button>
     </div>
     <div class="bg-white text-black p-4 rounded-lg">
@@ -130,8 +132,8 @@
       Body text for whatever you'd like to say.
      </p>
      <button class="bg-green-900 text-white px-4 py-2 rounded mt-2">
-      Voir
-     </button>
+      Voir+
+         </button>
     </div>
     <div class="bg-white text-black p-4 rounded-lg">
      <img alt="Image of Star Land Hotel" class="rounded-lg mb-2" height="200" src="https://storage.googleapis.com/a1aa/image/PgPcWLRO7k5tGZo02rYAaIixOllRFQsanKVHcmt4sY4bWe7JA.jpg" width="300"/>
@@ -142,7 +144,7 @@
       Body text for whatever you'd like to say.
      </p>
      <button class="bg-green-900 text-white px-4 py-2 rounded mt-2">
-      Voir
+      Voir+
      </button>
     </div>
    </div>
@@ -173,17 +175,17 @@
     </div>
    </div>
   </div>
-      //ajouter br 
+      
  <div class="container mx-auto p-4">
    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
     <div>
      <img alt="Interior of a modern apartment" class="w-full h-auto" height="400" src="https://storage.googleapis.com/a1aa/image/D4NSk3gfhP1ej0ERfUMuQIqhlqejS70p419lzYEp2BTrImfeE.jpg" width="600"/>
     </div>
     <div class="flex flex-col justify-center">
-     <h1 class="text-2xl font-bold mb-4">
+     <h1 class="text-2xl font-bold mb-4 text-white">
       Devenez vous aussi propriétaire dès aujourd'hui
      </h1>
-     <p class="mb-4">
+     <p class="mb-4 text-white">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet.
      </p>
      <button class="bg-black text-white py-2 px-4 rounded">
@@ -193,7 +195,7 @@
    </div>
    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
     <div class="flex flex-col justify-center">
-     <p class="mb-4">
+     <p class="mb-4 text-white">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa.
      </p>
     </div>
@@ -201,41 +203,41 @@
      <img alt="Exterior view of a modern building" class="w-full h-auto" height="400" src="https://storage.googleapis.com/a1aa/image/vnIM4B7TKvqBMln2wHupsKxvagvtN0NAiCdQbbXYY8KiYe7JA.jpg" width="600"/>
     </div>
    </div>
-   <h2 class="text-xl font-bold mt-8 mb-4">
+   <h2 class="text-3xl font-bold mt-8 mb-4 text-white">
     Les destinations favorites
    </h2>
    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-    <div class="text-center">
+    <div class="text-center text-white">
      <img alt="Skyline of Nairobi, Kenya" class="w-full h-auto mb-2" height="200" src="https://storage.googleapis.com/a1aa/image/1iNeFf0Sa3uTp0fPEqSFjCmxjxmbCCQFG1TWMT7hUqnbEzvnA.jpg" width="300"/>
      <p>
       Nairobi, Kenya
      </p>
     </div>
-    <div class="text-center">
+    <div class="text-center text-white">
      <img alt="Cityscape of Kinshasa, RDC" class="w-full h-auto mb-2" height="200" src="https://storage.googleapis.com/a1aa/image/eesjJnmTZ1miD0fBEz86M9zbeIiBYsJYWTm84Gd9NqZfRMf9E.jpg" width="300"/>
      <p>
       Kinshasa, RDC
      </p>
     </div>
-    <div class="text-center">
+    <div class="text-center text-white">
      <img alt="Coastal view of Kinshasa, RDC" class="w-full h-auto mb-2" height="200" src="https://storage.googleapis.com/a1aa/image/pn7gqneCo7QIZKWPYzQI6HwyO8RfAAfTFplepExy3ofaSMf9E.jpg" width="300"/>
      <p>
       Kinshasa, RDC
      </p>
     </div>
-    <div class="text-center">
+    <div class="text-center text-white">
      <img alt="Colorful market in Kigali, Rwanda" class="w-full h-auto mb-2" height="200" src="https://storage.googleapis.com/a1aa/image/kqXn6f3PkJRMbKoBEukVjBfHL0nu6J9txeogFhUXqQiiEzvnA.jpg" width="300"/>
      <p>
       Kigali, Rwanda
      </p>
     </div>
-    <div class="text-center">
+    <div class="text-center text-white">
      <img alt="Cityscape of Eko ekam, Cameroun" class="w-full h-auto mb-2" height="200" src="https://storage.googleapis.com/a1aa/image/nujOsEtS0hYwMRVsfuc0Z2m7lHQdca1iKO7PvZ1JTEsEx87JA.jpg" width="300"/>
      <p>
       Eko ekam, Cameroun
      </p>
     </div>
-    <div class="text-center">
+    <div class="text-center text-white">
      <img alt="Park view in Kinshasa, RDC" class="w-full h-auto mb-2" height="200" src="https://storage.googleapis.com/a1aa/image/YB5T7cx2pZagPFfSQVeeuLfeUWId6vBF0lGfCjhGCxuCjYe7JA.jpg" width="300"/>
      <p>
       Kinshasa, RDC
