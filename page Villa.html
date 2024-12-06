@@ -1,5 +1,4 @@
-<html lang="en">
- <head>
+<head>
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <title>
@@ -32,35 +31,41 @@
      Veuillez remplir les champs suivant.
     </h1>
     <div class="flex justify-center mb-8">
-     <div class="flex space-x-4">
-      <div class="w-10 h-10 flex items-center justify-center bg-white text-black rounded-full">
-       1
-      </div>
-      <div class="w-10 h-10 flex items-center justify-center border border-white text-white rounded-full">
-       2
-      </div>
+    <div class="flex items-center space-x-4">
+     <div class="w-8 h-8 bg-white text-gray-900 rounded-full flex items-center justify-center">
+      1
+     </div>
+     <div class="w-8 h-8 bg-black -500 text-white rounded-full flex items-center justify-center">
+      2
      </div>
     </div>
-    <h2 class="text-center text-lg mb-4">
+   </div>
+   <div class="bg-green-800 p-4 rounded-lg">
+    <h2 class="text-center mb-4">
      Informations générales
     </h2>
-    <form class="bg-green-800 p-6 rounded-lg space-y-4">
-     <div class="flex items-center space-x-2">
-      <div class="w-10 h-10 bg-gray-400 rounded-full">
-      </div>
-      <div>
-      <label>
-       Ajouter une photo (s)
-      </label>
-     </div>
-     <div class="flex items-center space-x-2">
-      <div class="w-10 h-10 bg-gray-400 rounded-full">
-      </div>
-      <label>
+    <div class="mb-4">
+    <span>
        Ajouter sa localisation maps
-      </label>
-     </div>
-     <div>
+      </span>
+     <label class="flex items-center space-x-2 mt-2">
+     <input class="w-1/6 p-10 rounded bg-white-700 text-black" name="photo" type="photo"/>
+     </label>
+    <span>
+       Ajouter une(des) photo(s)
+      </span>
+     <label class="flex items-center space-x-2">
+      <input class="w-1/6 p-10 rounded bg-white-700 text-black" name="photo" type="photo"/>
+      <input class="w-1/6 p-10 rounded bg-white-700 text-black" name="photo" type="photo"/>
+      <input class="w-1/6 p-10 rounded bg-white-700 text-black" name="photo" type="photo"/>
+      <input class="w-1/6 p-10 rounded bg-white-700 text-black" name="photo" type="photo"/>
+      <input class="w-1/6 p-10 rounded bg-white-700 text-black" name="photo" type="photo"/>
+      <input class="w-1/6 p-10 rounded bg-white-700 text-black" name="photo" type="photo"/>
+     </label>
+     </label>
+    </div>
+    <div class="space-y-10">
+    <div>
      <label for="Pays" class=" text-white">Pays</label>
       <select class="w-full p-2 rounded bg-white-700 text-black" placeholder="Pays" type="text">
       <option selected>Choisir un pays....</option>
@@ -72,7 +77,7 @@
     </div>
     <div>
     <label for="ville" class=" text-white">Ville</label>
-      <select class="w-full p-2 rounded bg-white-700 text-black" placeholder="ville" type="text">
+      <select class="w-full p-2 rounded bg-white-700 text-black" placeholder="ville" name="ville" type="text">
       <option selected>Choisir une ville....</option>
             <option value="yaounde">Yaounde</option>
             <option value="Limbe">Limbe</option>
@@ -137,13 +142,11 @@
                 <label for="details" class="block text-white">Details</label>
                 <textarea id="details" class="w-full p-4 rounded-lg h-32 text-black"></textarea>
             </div>
-     <div class="flex justify-center">
-      <button class="bg-black text-white py-2 px-6 rounded-full" type="submit">
-    Valider
-      </button>
-     </div>
-    </form>
-   </main>
+            <div class="flex justify-center">
+                <button type="submit" class="bg-black text-white py-2 px-4 rounded-full">Valider</button>
+            </div>
+    </div>
+   </div>
    <div class="flex justify-between items-center mt-8">
         <button
           class="bg-blue-600 px-4 py-2 rounded-md hover:bg-blue-700 focus:outline-none"
@@ -152,10 +155,14 @@
         </button>
         <button
           class="bg-blue-600 px-4 py-2 rounded-md hover:bg-blue-700 focus:outline-none"
-        ><a href="validerap.php">
+        ><a href="">
           Next →
           </a></button>
       </div>
   </div>
+  
+            
+
+     </form>
  </body>
 </html>
