@@ -1,9 +1,9 @@
 <?php
 // Informations de connexion à la base de données
-$servername = "localhost"; // Remplacez par votre hôte (généralement 'localhost')
-$username = "root";       // Remplacez par votre nom d'utilisateur
-$password = "";           // Remplacez par votre mot de passe
-$dbname = "reservation";  // Remplacez par le nom de votre base de données
+$servername = "localhost"; 
+$username = "root";       
+$password = "";          
+$dbname = "comparaison";  
 
 // Établir la connexion
 $conn = new mysqli($servername, $username, $password, $dbname);
