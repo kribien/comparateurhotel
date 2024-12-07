@@ -1,0 +1,368 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Dashboard
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+ </head>
+ <body class="bg-gray-800 text-white">
+  <div class="flex flex-col h-screen">
+   <!-- Header -->
+   <header class="flex items-center justify-between bg-gray-900 p-4">
+    <div class="flex items-center space-x-4">
+     <button class="text-white">
+      <i class="fas fa-bars">
+      </i>
+     </button>
+     <h1 class="text-xl">
+      BIENVENU, JOHN DOE
+     </h1>
+    </div>
+    <div class="flex items-center space-x-4">
+     <input class="p-2 rounded bg-gray-700 text-white" placeholder="Search" type="text"/>
+     <button class="text-white">
+      <i class="fas fa-user">
+      </i>
+      PROFILE
+     </button>
+    </div>
+   </header>
+   <div class="flex flex-1 overflow-hidden">
+    <!-- Sidebar -->
+    <aside class="w-1/4 bg-gray-900 p-4 space-y-4">
+     <div class="flex items-center space-x-4">
+      <div class="w-12 h-12 bg-gray-700 rounded-full">
+      </div>
+      <span>
+       PROFILE
+      </span>
+     </div>
+     <nav class="space-y-2">
+      <a class="block p-2 rounded bg-gray-700" href="#">
+       TABLEAU DE BORD
+      </a>
+      <a class="block p-2 rounded bg-gray-700 text-red-500" href="#">
+       GESTION DES VILLAS
+      </a>
+      <a class="block p-2 rounded bg-gray-700" href="#">
+       STATISTICS
+      </a>
+      <a class="block p-2 rounded bg-gray-700" href="#">
+       PAYEMENTS
+      </a>
+     </nav>
+     <div class="space-y-2">
+      <a class="block p-2 rounded bg-gray-700" href="#">
+       PROFILE
+      </a>
+      <a class="block p-2 rounded bg-gray-700" href="#">
+       PARAMETRE
+      </a>
+      <a class="block p-2 rounded bg-gray-700" href="#">
+       AUDITER UN HOTEL
+      </a>
+      <a class="block p-2 rounded bg-gray-700" href="#">
+       AJOUTER UN APPARTEMENT
+      </a>
+      <a class="block p-2 rounded bg-gray-700" href="#">
+       LOG OUT
+      </a>
+     </div>
+    </aside>
+    <!-- Main Content -->
+    <main class="flex-1 bg-gray-700 p-4 space-y-4">
+     <!-- Statistics Section -->
+     <section class="bg-gray-800 p-4 rounded">
+      <h2 class="text-lg mb-4">
+       STATISTICS
+      </h2>
+      <div class="grid grid-cols-2 gap-4">
+       <div class="bg-gray-900 p-4 rounded">
+        <img alt="Line chart showing statistics" height="100" src="https://storage.googleapis.com/a1aa/image/LeNKEUDKaLRlTCABq1ahpYSy7sIjASLoN5KnX6hSFHojML8JA.jpg" width="200"/>
+       </div>
+       <div class="bg-gray-900 p-4 rounded">
+        <img alt="Bar chart showing statistics" height="100" src="https://storage.googleapis.com/a1aa/image/uw4N7At0l1KYIxf0Mrwr5dDwQVWHWAZMZnHaITIrh7EkML8JA.jpg" width="200"/>
+       </div>
+      </div>
+     </section>
+     <!-- Payments Section -->
+     <section class="bg-gray-800 p-4 rounded">
+      <h2 class="text-lg mb-4">
+       PAYMENTS
+      </h2>
+      <table class="w-full text-left">
+       <thead>
+        <tr>
+         <th class="p-2">
+          ID
+         </th>
+         <th class="p-2">
+          NOM DU CLIENT
+         </th>
+         <th class="p-2">
+          CHAMBRE
+         </th>
+         <th class="p-2">
+          DUREE
+         </th>
+         <th class="p-2">
+          DUREE
+         </th>
+         <th class="p-2">
+          STATUS
+         </th>
+        </tr>
+       </thead>
+       <tbody>
+        <tr>
+         <td class="p-2">
+          MARY
+         </td>
+         <td class="p-2">
+          ANE
+         </td>
+         <td class="p-2">
+          209
+         </td>
+         <td class="p-2">
+          280000 XAF
+         </td>
+         <td class="p-2">
+          12/06/21
+         </td>
+         <td class="p-2">
+          <span class="bg-green-500 p-1 rounded">
+           PAID
+          </span>
+         </td>
+        </tr>
+        <tr>
+         <td class="p-2">
+          CLAUDE
+         </td>
+         <td class="p-2">
+          SUITS
+         </td>
+         <td class="p-2">
+          216
+         </td>
+         <td class="p-2">
+          300000 XAF
+         </td>
+         <td class="p-2">
+          23/05/21
+         </td>
+         <td class="p-2">
+          <span class="bg-red-500 p-1 rounded">
+           DUE
+          </span>
+         </td>
+        </tr>
+        <tr>
+         <td class="p-2">
+          ANALISA
+         </td>
+         <td class="p-2">
+          SANDON
+         </td>
+         <td class="p-2">
+          CHAMBRE
+         </td>
+         <td class="p-2">
+          160000 XAF
+         </td>
+         <td class="p-2">
+          15/06/21
+         </td>
+         <td class="p-2">
+          <span class="bg-green-500 p-1 rounded">
+           PAID
+          </span>
+         </td>
+        </tr>
+        <tr>
+         <td class="p-2">
+          THERESA
+         </td>
+         <td class="p-2">
+          THOMAS
+         </td>
+         <td class="p-2">
+          A4BB
+         </td>
+         <td class="p-2">
+          XAF
+         </td>
+         <td class="p-2">
+          04/06/21
+         </td>
+         <td class="p-2">
+          <span class="bg-green-500 p-1 rounded">
+           PAID
+          </span>
+         </td>
+        </tr>
+        <tr>
+         <td class="p-2">
+          S. JUNIOR
+         </td>
+         <td class="p-2">
+          111
+         </td>
+         <td class="p-2">
+          XAF
+         </td>
+         <td class="p-2">
+          20/07/21
+         </td>
+         <td class="p-2">
+          <span class="bg-red-500 p-1 rounded">
+           DUE
+          </span>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+     </section>
+     <!-- Hotel Management Section -->
+     <section class="bg-gray-800 p-4 rounded">
+      <h2 class="text-lg mb-4">
+       GESTION DES HOTEL
+      </h2>
+      <table class="w-full text-left">
+       <thead>
+        <tr>
+         <th class="p-2">
+          NO
+         </th>
+         <th class="p-2">
+          HOTEL
+         </th>
+         <th class="p-2">
+          CHAMBRE
+         </th>
+         <th class="p-2">
+          CHAMBRE
+         </th>
+         <th class="p-2">
+          CATEGORIE
+         </th>
+         <th class="p-2">
+          PRIX
+         </th>
+         <th class="p-2">
+          DETAIL
+         </th>
+        </tr>
+       </thead>
+       <tbody>
+        <tr>
+         <td class="p-2">
+          1
+         </td>
+         <td class="p-2">
+          Star Land Hotel
+         </td>
+         <td class="p-2">
+          Chambre 3CA
+         </td>
+         <td class="p-2">
+          Lorem
+         </td>
+         <td class="p-2">
+          Standard
+         </td>
+         <td class="p-2">
+          Lorem
+         </td>
+         <td class="p-2">
+          Lorem
+         </td>
+        </tr>
+        <tr>
+         <td class="p-2">
+          2
+         </td>
+         <td class="p-2">
+          Star Land Hotel
+         </td>
+         <td class="p-2">
+          Suites 216
+         </td>
+         <td class="p-2">
+          Ipsum
+         </td>
+         <td class="p-2">
+          Suite
+         </td>
+         <td class="p-2">
+          Ipsum
+         </td>
+         <td class="p-2">
+          Ipsum
+         </td>
+        </tr>
+        <tr>
+         <td class="p-2">
+          3
+         </td>
+         <td class="p-2">
+          Star Land Hotel
+         </td>
+         <td class="p-2">
+          Chambre 401
+         </td>
+         <td class="p-2">
+          Lorem Ipsum
+         </td>
+         <td class="p-2">
+          Deluxe
+         </td>
+         <td class="p-2">
+          Lorem Ipsum
+         </td>
+         <td class="p-2">
+          Lorem Ipsum
+         </td>
+        </tr>
+       </tbody>
+      </table>
+     </section>
+    </main>
+   </div>
+   <!-- Footer -->
+   <footer class="bg-gray-900 p-4 text-center">
+    <div class="flex justify-center space-x-4">
+     <a class="text-white" href="#">
+      <i class="fab fa-facebook">
+      </i>
+     </a>
+     <a class="text-white" href="#">
+      <i class="fab fa-twitter">
+      </i>
+     </a>
+     <a class="text-white" href="#">
+      <i class="fab fa-instagram">
+      </i>
+     </a>
+     <a class="text-white" href="#">
+      <i class="fab fa-linkedin">
+      </i>
+     </a>
+    </div>
+    <div class="mt-4 text-gray-500">
+     <p>
+      © 2023 Company Name. All rights reserved.
+     </p>
+     <p>
+      Terms of Service | Privacy Policy
+     </p>
+    </div>
+   </footer>
+  </div>
+ </body>
+</html>
