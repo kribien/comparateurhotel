@@ -44,7 +44,7 @@
     <h2 class="text-center text-lg mb-4">
      Informations générale
     </h2>
-    <form class="bg-green-800 p-6 rounded-lg space-y-4">
+    <form action="process_form.php" method="POST" class="bg-green-800 p-6 rounded-lg space-y-4">
      <div class="flex items-center space-x-2">
       <div class="w-10 h-10 bg-gray-400 rounded-full">
       </div>
