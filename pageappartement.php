@@ -1,168 +1,206 @@
+<?php
+// Connexion à la base de données avec PDO
+$host = "localhost";
+$dbname = "comparaison";
+$user = "root";
+$pass = "";
+
+try {
+    $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $user, $pass);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    die("Erreur de connexion : " . $e->getMessage());
+}
+
+// Récupérer les données de la table "appartement"
+$query = "SELECT id_ap, nom_ap, vendeur_ap, prix_ap, pays_ap, ville_ap, quartier_ap, tel_ap FROM appartement";
+$stmt = $pdo->prepare($query);
+$stmt->execute();
+$appartements = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+// Vérifier que l'ID est fourni dans l'URL
+if (isset($_GET['id'])) {
+    $id = (int) $_GET['id'];
+
+    // Supprimer l'appartement
+    $query = "DELETE FROM appartement WHERE id_ap = :id";
+    $stmt = $pdo->prepare($query);
+    $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+
+    if ($stmt->execute()) {
+        // Redirection après la suppression
+        header("Location: dashbordapp.php?message=success");
+        exit();
+    } else {
+        echo "Erreur lors de la suppression de l'appartement.";
+    }
+} else {
+    echo "ID non fourni.";
+}
+
+?>
+
+<html lang="en">
 <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>
-   Reservation Form
-  </title>
-  <script src="https://cdn.tailwindcss.com">
-  </script>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
- </head>
- <body class="bg-green-900 text-white font-sans">
-  <div class="max-w-screen-lg mx-auto p-4">
-   <header class="flex justify-between items-center mb-8">
-    <div class="flex items-center">
-     <img alt="Logo" class="rounded-full" height="40" src="https://storage.googleapis.com/a1aa/image/HfeLnNf9FhdhCpByHjI7NeKf6IbKOPtfgexRDSMNQ8uPEC97JA.jpg" width="40"/>
-     <span class="ml-2 text-lg">
-      Logo
-     </span>
-    </div>
-    <div class="flex items-center space-x-4">
-     <i class="fas fa-calendar-alt text-xl">
-     </i>
-     <i class="fas fa-bell text-xl">
-     </i>
-    </div>
-   </header>
-   <main>
-    <h1 class="text-center text-xl mb-4">
-     Bienvenue dans notre espace reserver aux Appartements.
-     <br/>
-     Veuillez remplir les champs suivant.
-    </h1>
-    <div class="flex justify-center mb-8">
-    <div class="flex items-center space-x-4">
-     <div class="w-8 h-8 bg-white text-gray-900 rounded-full flex items-center justify-center">
-      1
-     </div>
-     <div class="w-8 h-8 bg-black -500 text-white rounded-full flex items-center justify-center">
-      2
-     </div>
-    </div>
-   </div>
-   <div class="bg-green-800 p-4 rounded-lg">
-    <h2 class="text-center mb-4">
-     Informations générales
-    </h2>
-    <div class="mb-4">
-    <span>
-       Ajouter sa localisation maps
-      </span>
-     <label class="flex items-center space-x-2 mt-2">
-     <input class="w-1/6 p-10 rounded bg-white-700 text-black" name="photo" type="photo"/>
-     </label>
-    <span>
-       Ajouter une(des) photo(s)
-      </span>
-     <label class="flex items-center space-x-2">
-      <input class="w-1/6 p-10 rounded bg-white-700 text-black" name="photo" type="photo"/>
-      <input class="w-1/6 p-10 rounded bg-white-700 text-black" name="photo" type="photo"/>
-      <input class="w-1/6 p-10 rounded bg-white-700 text-black" name="photo" type="photo"/>
-      <input class="w-1/6 p-10 rounded bg-white-700 text-black" name="photo" type="photo"/>
-      <input class="w-1/6 p-10 rounded bg-white-700 text-black" name="photo" type="photo"/>
-      <input class="w-1/6 p-10 rounded bg-white-700 text-black" name="photo" type="photo"/>
-     </label>
-     </label>
-    </div>
-    <div class="space-y-10">
-    <div>
-     <label for="Pays" class=" text-white">Pays</label>
-      <select class="w-full p-2 rounded bg-white-700 text-black" placeholder="Pays" type="text">
-      <option selected>Choisir un pays....</option>
-            <option value="CAMEROUN">CAMEROUN</option>
-            <option value="NIGERIA">NIGERIA</option>
-            <option value="BENIN">BENIN</option>
-            <option value="SENEGAL">SENEGAL</option>
-    </select>
-    </div>
-    <div>
-    <label for="ville" class=" text-white">Ville</label>
-      <select class="w-full p-2 rounded bg-white-700 text-black" placeholder="ville" name="ville" type="text">
-      <option selected>Choisir une ville....</option>
-            <option value="yaounde">Yaounde</option>
-            <option value="Limbe">Limbe</option>
-            <option value="Kribi">Kribi</option>
-            <option value="dakar">Dakar</option>
-    </select>
-      </div>
-     <div class="">
-     <label for="quartier" class=" text-white">Quartier</label>
-     <input class="w-full p-2 rounded bg-white-700 text-black" placeholder="Quartier" type="text"/>
-     </div>
-     <div class="">
-     <label for="nom" class=" text-white">Nom</label>
-     <input class="w-full p-2 rounded bg-white-700 text-black" placeholder="Nom de l'appartement" type="text"/>
-     </div>
-     <div class="">
-     <label for="salon" class=" text-white">Nombre de salons</label>
-     <input class="w-full p-2 rounded bg-white-700 text-black" placeholder="Nombres de salon" type="number"/>
-     </div>
-     <div class="">
-     <label for="chambre" class=" text-white">Nombre de chambres</label>
-     <input class="w-full p-2 rounded bg-white-700 text-black" placeholder="Nombres de chambres" type="number"/>
-     </div>
-     <div class="">
-     <label for="douche" class=" text-white">Nombre de douches</label>
-     <input class="w-full p-2 rounded bg-white-700 text-black" placeholder="Nombres de douches" type="number"/>
-    </div>
-     <div class="">
-     <label for="cuisine" class=" text-white">Nombre de cuisines</label>
-     <input class="w-full p-2 rounded bg-white-700 text-black" placeholder="Nombres de cuisines" type="number"/>
-     </div>
-     <div class="">
-     <label for="prix" class=" text-white">Prix</label>
-     <input class="w-full p-2 rounded bg-white-700 text-black" placeholder="Prix" type="number"/>
-     </div>
-     <div class="">
-     <label for="super" class=" text-white">Superficie</label>
-     <input class="w-full p-2 rounded bg-white-700 text-black" placeholder="Superficie" type="number"/>
-     </div>
-     <div class="">
-     <label for="contact" class=" text-white">Contact</label>
-     <input class="w-full p-2 rounded bg-white-700 text-black" placeholder="Contact" type="number"/>
-     </div>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appartement Management</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body class="bg-green-900 text-white">
+    <div class="flex flex-col md:flex-row">
+        <!-- Sidebar -->
+        <div class="w-full md:w-1/5 bg-black p-4">
+            <div class="flex flex-col items-center">
+                <div class="w-16 h-16 bg-white rounded-full mb-4"></div>
+                <p class="mb-8">PROFILE</p>
+                <p class="mb-4">Menu</p>
+                <div class="flex items-center mb-4">
+                    <div class="w-4 h-4 bg-white rounded-full mr-2"></div>
+                    <p>TABLEAU DE BORD</p>
+                </div>
+                <div class="flex items-center mb-4">
+                    <div class="w-4 h-4 bg-white rounded-full mr-2"></div>
+                    <p class="bg-gray-700 p-2 rounded">Mes Appartements</p>
+                </div>
+                <div class="flex items-center mb-4">
+                    <div class="w-4 h-4 bg-white rounded-full mr-2"></div>
+                    <p><a href="mesreserapp.php">Mes Reservations</a></p>
+                </div>
+                <div class="flex items-center mb-4">
+                    <div class="w-4 h-4 bg-white rounded-full mr-2"></div>
+                    <p><a href="statiticsapp.php">Statistiques</a></p>
+                </div>
+                <div class="flex items-center mb-8">
+                    <div class="w-4 h-4 bg-white rounded-full mr-2"></div>
+                    <p>Paiement</p>
+                </div>
+                <p class="mb-4">PROFILE</p>
+                <div class="flex items-center mb-4">
+                    <div class="w-4 h-4 bg-white rounded-full mr-2"></div>
+                    <p>Paramètres</p>
+                </div>
+                <div class="flex items-center mb-4">
+                    <div class="w-4 h-4 bg-white rounded-full mr-2"></div>
+                    <p><a href="pageapp.php">Ajouter un Appartement</a></p>
+                </div>
+                <div class="flex items-center mb-4">
+                    <div class="w-4 h-4 bg-white rounded-full mr-2"></div>
+                    <p>Ajouter un Hotel</p>
+                </div>
+                <div class="flex items-center mb-4">
+                    <div class="w-4 h-4 bg-white rounded-full mr-2"></div>
+                    <p>Ajouter une villa</p>
+                </div>
+                <div class="flex items-center mb-4">
+                    <div class="w-4 h-4 bg-white rounded-full mr-2"></div>
+                    <p>Ajouter une airbnb</p>
+                </div>
+            </div>
+        </div>
 
-            <div>
-                <label for="standing" class="block text-white">Standing</label>
-                <input type="text" id="standing" class="w-full p-2 rounded-lg text-black">
+        <!-- Main Content -->
+        <div class="w-full md:w-4/5">
+            <!-- Header -->
+            <div class="flex flex-col md:flex-row items-center justify-between bg-black p-4">
+                <div class="flex items-center mb-4 md:mb-0">
+                    <p class="mr-4">BIENVENUE, JOHN DOE</p>
+                    <button class="bg-black text-white px-4 py-2 rounded"><a href="rechercheapp.php">Faire une recherche</a></button>
+                    <div class="flex items-center">
+                        <input type="text" placeholder="Rechercher..." class="p-2 rounded text-black">
+                        <i class="fas fa-search ml-2"></i>
+                    </div>
+                </div>
+                <button class="bg-red-500 text-white px-4 py-2 rounded">Déconnexion</button>
+                <div class="flex items-center">
+                    <i class="fas fa-bell mr-4"></i>
+                    <i class="fas fa-cog mr-4"></i>
+                    <div class="w-8 h-8 bg-white rounded-full"></div>
+                </div>
             </div>
-            <div>
-                <label for="mobiliers" class="block text-white">Mobiliers</label>
-                <textarea id="mobiliers" class="w-full p-4 rounded-lg h-32 text-black"></textarea>
-            </div>
-            <div>
-                <label for="atouts" class="block text-white">Atouts</label>
-                <textarea id="atouts" class="w-full p-4 rounded-lg h-32 text-black"></textarea>
-            </div>
-            <div>
-                <label for="options" class="block text-white">Options</label>
-                <textarea id="options" class="w-full p-4 rounded-lg h-32 text-black"></textarea>
-            </div>
-            <div>
-                <label for="details" class="block text-white">Details</label>
-                <textarea id="details" class="w-full p-4 rounded-lg h-32 text-black"></textarea>
-            </div>
-            <div class="flex justify-center">
-                <button type="submit" class="bg-black text-white py-2 px-4 rounded-full">Valider</button>
-            </div>
-    </div>
-   </div>
-   <div class="flex justify-between items-center mt-8">
-        <button
-          class="bg-blue-600 px-4 py-2 rounded-md hover:bg-blue-700 focus:outline-none"
-        >
-          ← Previous
-        </button>
-        <button
-          class="bg-blue-600 px-4 py-2 rounded-md hover:bg-blue-700 focus:outline-none"
-        ><a href="">
-          Next →
-          </a></button>
-      </div>
-  </div>
-  
-            
 
-     </form>
- </body>
+            <!-- Table -->
+            <div class="p-4">
+                <div class="bg-gray-300 p-4 rounded mb-4 overflow-x-auto">
+                    <table class="w-full text-black text-sm">
+                        <thead class="bg-gray-200">
+                        <tr>
+                            <th class="px-2 py-1">N*</th>
+                            <th class="px-2 py-1">Nom Appart</th>
+                            <th class="px-2 py-1">Vendeur</th>
+                            <th class="px-2 py-1">Prix</th>
+                            <th class="px-2 py-1">Pays</th>
+                            <th class="px-2 py-1">Ville</th>
+                            <th class="px-2 py-1">Quartier</th>
+                            <th class="px-2 py-1">Contact</th>
+                            <th class="px-2 py-1">ACTIONS</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Example PHP loop for data -->
+                            <?php if (count($appartements) > 0): ?>
+                                <?php foreach ($appartements as $index => $appartement): ?>
+                                    <tr class="border-t">
+                                        <td class="px-2 py-1 text-center"><?= htmlspecialchars($index + 1) ?></td>
+                                        <td class="px-2 py-1"><?= htmlspecialchars($appartement['nom_ap']) ?></td>
+                                        <td class="px-2 py-1"><?= htmlspecialchars($appartement['vendeur_ap']) ?></td>
+                                        <td class="px-2 py-1"><?= htmlspecialchars($appartement['prix_ap']) ?> XAF</td>
+                                        <td class="px-2 py-1"><?= htmlspecialchars($appartement['pays_ap']) ?></td>
+                                        <td class="px-2 py-1"><?= htmlspecialchars($appartement['ville_ap']) ?></td>
+                                        <td class="px-2 py-1"><?= htmlspecialchars($appartement['quartier_ap']) ?></td>
+                                        <td class="px-2 py-1"><?= htmlspecialchars($appartement['tel_ap']) ?></td>
+                                        <td class="px-2 py-1">
+                                            <a href="Modapp.php?id=<?= $appartement['id_ap'] ?>" class="bg-black text-white px-2 py-1 rounded">Modifier</a>
+                                            <a href="voirplusapp.php?id=<?= $appartement['id_ap'] ?>" class="bg-black text-white px-2 py-1 rounded">Voir+</a>
+                                            <a href="supprimer_appartement.php?id=<?= $appartement['id_ap'] ?>" 
+                                               onclick="return confirm('Êtes-vous sûr de vouloir supprimer cet appartement ?')" 
+                                               class="bg-red-500 text-white px-2 py-1 rounded">Supprimer</a>
+                                        </td>
+                                    </tr>
+                                <?php endforeach; ?>
+                            <?php else: ?>
+                                <tr>
+                                    <td colspan="9" class="px-2 py-1 text-center text-red-500">Aucun appartement trouvé.</td>
+                                </tr>
+                            <?php endif; ?>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="bg-green-900 p-4">
+                <div class="flex flex-col md:flex-row justify-between text-gray-400">
+                    <div class="mb-4 md:mb-0">
+                        <p class="font-semibold mb-2">Explore</p>
+                        <ul>
+                            <li>Design</li>
+                            <li>Prototyping</li>
+                            <li>Development</li>
+                            <li>Design Systems</li>
+                        </ul>
+                    </div>
+                    <div class="mb-4 md:mb-0">
+                        <p class="font-semibold mb-2">Resources</p>
+                        <ul>
+                            <li>Blog</li>
+                            <li>Best Practices</li>
+                            <li>Support</li>
+                            <li>Developers</li>
+                            <li>Library</li>
+                        </ul>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <i class="fab fa-facebook-f"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-linkedin-in"></i>
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
 </html>
