@@ -2,10 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Dec 06, 2024 at 06:22 PM
--- Server version: 10.4.32-MariaDB
--- PHP Version: 8.2.12
+-- Hôte : 127.0.0.1
+-- Généré le : jeu. 12 déc. 2024 à 10:50
+-- Version du serveur : 10.4.32-MariaDB
+-- Version de PHP : 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `comparaison`
+-- Base de données : `comparaison`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `airbnb`
+-- Structure de la table `airbnb`
 --
 
 CREATE TABLE `airbnb` (
@@ -53,7 +53,7 @@ CREATE TABLE `airbnb` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `appartement`
+-- Structure de la table `appartement`
 --
 
 CREATE TABLE `appartement` (
@@ -74,13 +74,29 @@ CREATE TABLE `appartement` (
   `cuisine_ap` int(2) NOT NULL,
   `tel_ap` varchar(50) NOT NULL,
   `mobilier` varchar(250) NOT NULL,
-  `nom_ap` varchar(250) NOT NULL
+  `nom_ap` varchar(250) NOT NULL,
+  `vendeur_ap` varchar(250) NOT NULL,
+  `standing_ap` varchar(250) DEFAULT NULL,
+  `disponible_ap` varchar(250) NOT NULL,
+  `option_ap` varchar(250) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Déchargement des données de la table `appartement`
+--
+
+INSERT INTO `appartement` (`id_ap`, `ville_ap`, `pays_ap`, `quartier_ap`, `salon_ap`, `chambre_ap`, `douche_ap`, `prix_ap`, `detail_ap`, `comment_ap`, `superficie_ap`, `atouts_ap`, `photo_ap`, `maps_ap`, `cuisine_ap`, `tel_ap`, `mobilier`, `nom_ap`, `vendeur_ap`, `standing_ap`, `disponible_ap`, `option_ap`) VALUES
+(1, 'Limbe', 'CAMEROUN', 'monatele', 2, 3, 2, 450000, '', NULL, 120, '', '', '', 1, '6984562', '', 'DESIRE', 'Suka Cookies', 'elevé', '0', ''),
+(2, 'yaounde', 'CAMEROUN', 'mimboman', 2, 3, 1, 120000, '', NULL, 45, '', '', '', 1, '6984512', '', 'ECLAIR', 'Breanna NGUEKENG SEUDJIE', 'VIP', '0', ''),
+(3, 'yaounde', 'CAMEROUN', 'Ekounou', 1, 1, 1, 85000, '', NULL, 145, '', '', '', 1, '6894512', 'Meubles de valeur\r\nstatuettes de valeur', 'ECLIPSE', 'Carlos POKAM', 'Pas tres élevé', 'dispo', ''),
+(4, 'yaounde', 'CAMEROUN', 'Essos', 2, 3, 1, 45000, '', NULL, 120, '', '', '', 1, '6951236', '', 'California', 'Takam II', 'VIP', 'dispo', ''),
+(5, 'yaounde', 'CAMEROUN', 'Madagarcar', 2, 2, 2, 100000, '', NULL, 145, '', '★★★★ Star Land Hotel Bonapriso, Douala, Cameroon.jpeg', '', 1, '698451230', '', 'Perfect slim', 'Ulrich Sanchong', 'Moyen', 'dispo', ''),
+(6, 'yaounde', 'CAMEROUN', 'Moungo', 2, 2, 2, 100000, '', NULL, 145, '', '96e4b428-9c0a-4e62-909c-a019f43c6585.jpeg', '', 1, '632124589', '', 'Totaal', 'Michelle Tsasom', 'Moyen', 'dispo', '');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `chambre_hotel`
+-- Structure de la table `chambre_hotel`
 --
 
 CREATE TABLE `chambre_hotel` (
@@ -102,7 +118,7 @@ CREATE TABLE `chambre_hotel` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `gérer`
+-- Structure de la table `gérer`
 --
 
 CREATE TABLE `gérer` (
@@ -113,7 +129,7 @@ CREATE TABLE `gérer` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `hotel`
+-- Structure de la table `hotel`
 --
 
 CREATE TABLE `hotel` (
@@ -135,7 +151,7 @@ CREATE TABLE `hotel` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `louer`
+-- Structure de la table `louer`
 --
 
 CREATE TABLE `louer` (
@@ -146,7 +162,7 @@ CREATE TABLE `louer` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `reserver`
+-- Structure de la table `reserver`
 --
 
 CREATE TABLE `reserver` (
@@ -157,7 +173,7 @@ CREATE TABLE `reserver` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `utilisateur`
+-- Structure de la table `utilisateur`
 --
 
 CREATE TABLE `utilisateur` (
@@ -183,7 +199,7 @@ CREATE TABLE `utilisateur` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `utilisateur`
+-- Déchargement des données de la table `utilisateur`
 --
 
 INSERT INTO `utilisateur` (`id_ges_ap`, `id_villa`, `id_ap`, `nom_ges_ap`, `email_ges_ap`, `date_nais_ges_ap`, `tel_ges_ap`, `ville_ges_ap`, `quartier_ges_ap`, `pays_ges_ap`, `nationalite_ges_ap`, `num_cni_ges_ap`, `num_pass_ges_ap`, `num_permis_ges_ap`, `photo_ges_ap`, `mdp_ges_ap`, `id_chambre`, `id_hotel`, `fonction_ges_ap`) VALUES
@@ -202,7 +218,7 @@ INSERT INTO `utilisateur` (`id_ges_ap`, `id_villa`, `id_ap`, `nom_ges_ap`, `emai
 -- --------------------------------------------------------
 
 --
--- Table structure for table `villa`
+-- Structure de la table `villa`
 --
 
 CREATE TABLE `villa` (
@@ -228,7 +244,7 @@ CREATE TABLE `villa` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `vivre`
+-- Structure de la table `vivre`
 --
 
 CREATE TABLE `vivre` (
@@ -237,36 +253,36 @@ CREATE TABLE `vivre` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Indexes for dumped tables
+-- Index pour les tables déchargées
 --
 
 --
--- Indexes for table `airbnb`
+-- Index pour la table `airbnb`
 --
 ALTER TABLE `airbnb`
   ADD PRIMARY KEY (`id_air`);
 
 --
--- Indexes for table `appartement`
+-- Index pour la table `appartement`
 --
 ALTER TABLE `appartement`
   ADD PRIMARY KEY (`id_ap`);
 
 --
--- Indexes for table `chambre_hotel`
+-- Index pour la table `chambre_hotel`
 --
 ALTER TABLE `chambre_hotel`
   ADD PRIMARY KEY (`id_chambre`);
 
 --
--- Indexes for table `gérer`
+-- Index pour la table `gérer`
 --
 ALTER TABLE `gérer`
   ADD PRIMARY KEY (`ib_air`),
   ADD KEY `id_ges_ap` (`id_ges_ap`);
 
 --
--- Indexes for table `hotel`
+-- Index pour la table `hotel`
 --
 ALTER TABLE `hotel`
   ADD PRIMARY KEY (`id_hotel`),
@@ -274,21 +290,21 @@ ALTER TABLE `hotel`
   ADD KEY `id_chambre` (`id_chambre`);
 
 --
--- Indexes for table `louer`
+-- Index pour la table `louer`
 --
 ALTER TABLE `louer`
   ADD PRIMARY KEY (`id_ap`,`id_ges_ap`),
   ADD KEY `louer_ibfk_2` (`id_ges_ap`);
 
 --
--- Indexes for table `reserver`
+-- Index pour la table `reserver`
 --
 ALTER TABLE `reserver`
   ADD PRIMARY KEY (`id_ges_ap`,`id_chambre`),
   ADD KEY `reserver_ibfk_2` (`id_chambre`);
 
 --
--- Indexes for table `utilisateur`
+-- Index pour la table `utilisateur`
 --
 ALTER TABLE `utilisateur`
   ADD PRIMARY KEY (`id_ges_ap`),
@@ -298,96 +314,96 @@ ALTER TABLE `utilisateur`
   ADD KEY `id_hotel` (`id_hotel`);
 
 --
--- Indexes for table `villa`
+-- Index pour la table `villa`
 --
 ALTER TABLE `villa`
   ADD PRIMARY KEY (`id_villa`);
 
 --
--- Indexes for table `vivre`
+-- Index pour la table `vivre`
 --
 ALTER TABLE `vivre`
   ADD PRIMARY KEY (`id_ges_ap`,`id_villa`),
   ADD KEY `id_villa` (`id_villa`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT pour les tables déchargées
 --
 
 --
--- AUTO_INCREMENT for table `airbnb`
+-- AUTO_INCREMENT pour la table `airbnb`
 --
 ALTER TABLE `airbnb`
   MODIFY `id_air` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `appartement`
+-- AUTO_INCREMENT pour la table `appartement`
 --
 ALTER TABLE `appartement`
-  MODIFY `id_ap` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_ap` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT for table `chambre_hotel`
+-- AUTO_INCREMENT pour la table `chambre_hotel`
 --
 ALTER TABLE `chambre_hotel`
   MODIFY `id_chambre` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `hotel`
+-- AUTO_INCREMENT pour la table `hotel`
 --
 ALTER TABLE `hotel`
   MODIFY `id_hotel` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `louer`
+-- AUTO_INCREMENT pour la table `louer`
 --
 ALTER TABLE `louer`
   MODIFY `id_ges_ap` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `utilisateur`
+-- AUTO_INCREMENT pour la table `utilisateur`
 --
 ALTER TABLE `utilisateur`
   MODIFY `id_ges_ap` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
--- AUTO_INCREMENT for table `villa`
+-- AUTO_INCREMENT pour la table `villa`
 --
 ALTER TABLE `villa`
   MODIFY `id_villa` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- Constraints for dumped tables
+-- Contraintes pour les tables déchargées
 --
 
 --
--- Constraints for table `gérer`
+-- Contraintes pour la table `gérer`
 --
 ALTER TABLE `gérer`
   ADD CONSTRAINT `gérer_ibfk_1` FOREIGN KEY (`id_ges_ap`) REFERENCES `utilisateur` (`id_ges_ap`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `gérer_ibfk_2` FOREIGN KEY (`ib_air`) REFERENCES `airbnb` (`id_air`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `hotel`
+-- Contraintes pour la table `hotel`
 --
 ALTER TABLE `hotel`
   ADD CONSTRAINT `hotel_ibfk_1` FOREIGN KEY (`id_chambre`) REFERENCES `chambre_hotel` (`id_chambre`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `louer`
+-- Contraintes pour la table `louer`
 --
 ALTER TABLE `louer`
   ADD CONSTRAINT `louer_ibfk_1` FOREIGN KEY (`id_ap`) REFERENCES `appartement` (`id_ap`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `louer_ibfk_2` FOREIGN KEY (`id_ges_ap`) REFERENCES `utilisateur` (`id_ges_ap`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `reserver`
+-- Contraintes pour la table `reserver`
 --
 ALTER TABLE `reserver`
   ADD CONSTRAINT `reserver_ibfk_2` FOREIGN KEY (`id_chambre`) REFERENCES `utilisateur` (`id_ges_ap`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `utilisateur`
+-- Contraintes pour la table `utilisateur`
 --
 ALTER TABLE `utilisateur`
   ADD CONSTRAINT `utilisateur_ibfk_1` FOREIGN KEY (`id_villa`) REFERENCES `villa` (`id_villa`) ON DELETE CASCADE ON UPDATE CASCADE,
@@ -396,7 +412,7 @@ ALTER TABLE `utilisateur`
   ADD CONSTRAINT `utilisateur_ibfk_4` FOREIGN KEY (`id_hotel`) REFERENCES `hotel` (`id_hotel`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `vivre`
+-- Contraintes pour la table `vivre`
 --
 ALTER TABLE `vivre`
   ADD CONSTRAINT `vivre_ibfk_1` FOREIGN KEY (`id_ges_ap`) REFERENCES `utilisateur` (`id_ges_ap`) ON DELETE CASCADE ON UPDATE CASCADE,
@@ -405,4 +421,4 @@ COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATI
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
